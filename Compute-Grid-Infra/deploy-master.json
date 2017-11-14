@@ -5,18 +5,6 @@
     "VMsku": {
       "type": "string",
       "defaultValue": "Standard_DS2_v2",
-      "allowedValues": [
-        "Standard_DS1_v2",
-        "Standard_DS2_v2",
-        "Standard_DS3_v2",
-        "Standard_DS4_v2",
-        "Standard_DS5_v2",
-        "Standard_DS11_v2",
-        "Standard_DS12_v2",
-        "Standard_DS13_v2",
-        "Standard_DS14_v2",
-        "Standard_DS15_v2"
-      ],
       "metadata": {
         "description": "sku to use for the master VM"
       }
@@ -24,14 +12,6 @@
     "masterImage": {
       "type": "string",
       "defaultValue": "CentOS_7.3",
-      "allowedValues": [
-        "CentOS_6.7",
-        "CentOS_7.2",
-        "CentOS_7.3",
-        "RHEL_7.2",
-        "SLES12",
-        "W2012R2"
-      ],
       "metadata": {
         "description": "The VM image of the master nodes"
       }
@@ -39,11 +19,6 @@
     "sharedStorage": {
       "type": "string",
       "defaultValue": "nfsonmaster",
-      "allowedValues": [
-        "none",
-        "beegfs",
-        "nfsonmaster"
-      ],
       "metadata": {
         "description": "specify the shared storage to be used. beegfs=> beegfs cluster, nfsonmaster=> nfs share on the master"
       }
@@ -51,12 +26,6 @@
     "dataDiskSize": {
       "type": "string",
       "defaultValue": "P10",
-      "allowedValues": [
-        "none",
-        "P10",
-        "P20",
-        "P30"
-      ],
       "metadata": {
         "description": "Premium storage disk size to attach"
       }
@@ -66,16 +35,11 @@
       "metadata": {
         "description": "Number of data disks to attach to the master"
       },
-      "defaultValue": 4,
-      "maxValue": 16
+      "defaultValue": 4
     },
     "monitoring": {
       "type": "string",
       "defaultValue": "ganglia",
-      "allowedValues": [
-        "none",
-        "ganglia"
-      ],
       "metadata": {
         "description": "specify the monitoring to use"
       }
@@ -83,10 +47,6 @@
     "scheduler": {
       "type": "string",
       "defaultValue": "pbspro",
-      "allowedValues": [
-        "none",
-        "pbspro"
-      ],
       "metadata": {
         "description": "specify the job scheduler to be used"
       }
@@ -101,7 +61,7 @@
     },
     "adminUserName": {
       "type": "string",
-      "defaultValue": "odl_user",
+      "defaultValue": "hpcadmin",
       "metadata": {
         "description": "User name for the Virtual Machine."
       }
@@ -109,17 +69,13 @@
     "authenticationType": {
       "type": "string",
       "defaultValue": "password",
-      "allowedValues": [
-        "password",
-        "sshPublicKey"
-      ],
       "metadata": {
         "description": "Authentication type for the virtual machines"
       }
     },
     "adminPassword": {
       "type": "securestring",
-      "defaultValue": "",
+      "defaultValue": "MyPassword1234!",
       "metadata": {
         "description": "Admin password for the virtual machines"
       }
